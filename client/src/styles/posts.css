@@ -1,0 +1,125 @@
+.card {
+	background-color: white;
+	color: #272727;
+	padding: 20px;
+	border-radius: 10px;
+	border: 0px;
+	border-color: tomato;
+	border-style: solid;
+	transition: 200ms;
+    width: 350px;
+	margin: 50px 100px 50px 50px;
+}
+
+.card:hover {
+	transition: 200ms;
+	border: 3px;
+	border-color: tomato;
+	border-style: solid;
+}
+
+.card-header {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+
+}
+
+.profile {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: tomato;
+	border-radius: 50%;
+	margin: 10px;
+	font-size: 20pt;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	justify-content: center;
+}
+
+.letter {
+	vertical-align: middle;
+}
+
+.card-title-group {
+	justify-content: center;
+}
+
+.card-title {
+	flex: 0.5;
+	font-size: large;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.card-date {
+	flex: 0.3;
+	font-size: small;
+	margin-top: 0;
+}
+
+.card-image {
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.card-text {
+	width: 350px;
+	font-size: medium;
+}
+.userLogo{
+    height: inherit;
+    width: inherit;
+}
+.card-post-bar {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	justify-content: space-between;
+}
+
+.post-title {
+	font-size: large;
+	margin-left: 10px;
+}
+.post-description {
+	font-size: small;
+	margin-left: 10px;
+}
+.postCards{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.postsBG{
+    background-color: #000000;
+}
+.postsBG img {
+	position: absolute;
+	height: 600px;
+    display: block;
+    margin-left: 350px;
+    margin-right: auto;
+	margin-top: 100px;
+    width: 50%;
+}
+.postBGcolor{
+	height: 700px;
+	background-color: #000000;
+}
+.deleteButton{
+	height: 53px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+	cursor: no-drop;
+	border-radius: 7px;
+	background: #1a81ff;
+	transition: all 0.3s ease;
+	margin-left: 50px;
+	min-width: 100px;
+	outline: none;
+	border: none;
+  }
