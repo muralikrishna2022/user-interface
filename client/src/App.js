@@ -1,11 +1,20 @@
 import './App.css';
-import Homepage from './homepage'
+import Navbar from './Navbar';
 import './styles/friends_font.css'
+import { UserProvider } from './usercontext';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-     <Homepage/>
+      <UserProvider>
+      <BrowserRouter>
+<Routes>
+<Route path="/" element={<Navbar />}>
+     </Route>
+</Routes>
+</BrowserRouter>
+</UserProvider>
     </div>
   );
 }

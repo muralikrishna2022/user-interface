@@ -1,10 +1,9 @@
 import logo from "../public/Friends-logo.png";
-import { Link } from "react-router-dom";
 import '../styles/navbar.css'
 import { useContext, Fragment } from "react";
 import UserContext from "../context/userContext";
 import { useNavigate } from "react-router-dom";
-
+import { Outlet, Link } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   const { userStatus, updateUser } = useContext(UserContext);
@@ -76,6 +75,7 @@ const Navbar = () => {
           {userStatus.authenticated ? authenticated : guest}
         </div>
       </nav>
+      <Outlet/>
     </div>
   );
 };
