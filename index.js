@@ -3,10 +3,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const path = require('path');
+const PORT = process.env.PORT || 5000; // default
 
 const userRoutes = require('./server/routes/user');
 const postRoutes = require('./server/routes/post'); 
-app.use('/post', postRoutes);
+const commentRoutes = require('./server/routes/comment');
+
 
 mongoose.connect(process.env.dbURL)
   .then(console.log("DB Connected!!"))
@@ -25,6 +27,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/user', userRoutes);
+app.use('/post', postRoutes);
+app.use('/comment', commentRoutes);
 
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
